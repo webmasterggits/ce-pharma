@@ -74,7 +74,7 @@
           <label for="sch">Select</label>
           <select class="form-control input-lg" id="prog">
             <option>B.Pharma</option>
-            
+            <option>D.Pharma</option>
            
           </select>
           <select class="form-control input-lg" id="doc">
@@ -122,7 +122,15 @@
         <td><a href="Syllabus/Syllabus 8 sem.pdf"  download="EX Eighth"><img id="down" src="images/download.png"/></a></td>
       </tr>
     </table>
-
+    <table class="table table-striped" id="hmsyl">
+      <caption style="margin-left:auto;margin-right:auto;"><h3>Syllabus</h3></caption>
+        <tr>
+          <td><h3>Syllabus</h3></td>
+          <td><a href="Scheme/Dpharmascheme.pdf"  download="EX Fisrt"><img id="down" src="images/download.png"/></a></td>
+        </tr>
+    </table>
+    
+   
     <!--scheme-->
     <table class="table table-striped" id="hbsch">
     <caption style="margin-left:auto;margin-right:auto;"><h3>Scheme</h3></caption>
@@ -159,6 +167,15 @@
         <td><a href="Scheme/Scheme 8 sem.pdf"  download="EX Eighth"><img id="down" src="images/download.png"/></a></td>
       </tr>
     </table>
+    <table class="table table-striped" id="hmsch">
+      <caption style="margin-left:auto;margin-right:auto;"><h3>Scheme</h3></caption>
+        <tr>
+          <td><h3>Scheme</h3></td>
+          <td><a href="Scheme/Dpharmascheme.pdf"  download="EX Fisrt"><img id="down" src="images/download.png"/></a></td>
+        </tr>
+    </table>
+    
+   
 
 
    
@@ -180,11 +197,14 @@
   {
     var prog=$("#prog").val();
     var doc=$("#doc").val();
-    if (prog=="B.pharm") {
+    if (prog=="B.Pharma") {
         if (doc=="Syllabus") {$("#hbsyl").show(600);$("#hbsch").hide(400);$("#hmsch").hide(400);$("#hbmyl").hide(400);};
         if (doc=="Scheme") {$("#hbsch").show(600);$("#hbsyl").hide(400);$("#hmsch").hide(400);$("#hbmyl").hide(400);};
     };
-    
+    if (prog=="D.Pharma") {
+        if (doc=="Syllabus") {$("#hmsyl").show(600);$("#hmsch").hide(400);$("#hbsch").hide(400);$("#hbsyl").hide(400);};
+        if (doc=="Scheme") {$("#hmsch").show(600);$("#hmsyl").hide(400);$("#hbsch").hide(400);$("#hbsyl").hide(400);};
+    };
   }
   $("document").ready(function() {
     $("#hbsch").hide();
